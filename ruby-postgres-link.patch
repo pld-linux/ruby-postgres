@@ -1,0 +1,12 @@
+--- ruby-postgres-0.7.1/extconf.rb.orig	2002-12-10 04:55:35.000000000 +0100
++++ ruby-postgres-0.7.1/extconf.rb	2004-08-24 08:42:42.679316809 +0200
+@@ -11,8 +11,7 @@
+ $LDFLAGS = ""
+ 
+ have_library("wsock32", "cygwin32_socket") or have_library("socket", "socket")
+-have_library("inet", "gethostbyname")
+-have_library("nsl", "gethostbyname")
++have_func("gethostbyname") or have_library("inet", "gethostbyname") or have_library("nsl", "gethostbyname")
+ have_header("sys/un.h")
+ if have_func("socket") or have_func("cygwin32_socket")
+   have_func("hsterror")
