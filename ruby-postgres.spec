@@ -9,6 +9,7 @@ License:	Ruby License
 Group:		Development/Languages
 Source0:	http://www.postgresql.jp/interfaces/ruby/archive/%{tarname}-%{version}.tar.gz
 # Source0-md5:	8ef67b3f4b089248f0420baeb0e3b3c8
+Patch0:		ruby-postgres-link.patch
 URL:		http://www.postgresql.jp/interfaces/ruby/
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
@@ -25,10 +26,13 @@ Modu³ PostgreSQL dla Ruby.
 
 %prep
 %setup -q -n %{tarname}-%{version}
+%patch0 -p1
 
 %build
 ruby extconf.rb
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -fPIC"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -44,4 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README*
-%{ruby_archdir}/*
+%attr(755,root,root) %{ruby_archdir}/postgres.so
