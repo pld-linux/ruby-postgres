@@ -10,7 +10,7 @@ License:	Ruby License
 Group:		Development/Languages
 Source0:	http://ruby.scripting.ca/postgres/archive/ruby-postgres-%{pre}.tar.gz
 # Source0-md5:	34693e6468f8c20f1f0c039f7e101cdf
-URL:		http://ruby.scripting.ca/postgre
+URL:		http://ruby.scripting.ca/postgres/
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 BuildRequires:	postgresql-devel
