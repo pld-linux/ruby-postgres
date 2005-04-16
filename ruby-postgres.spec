@@ -3,14 +3,14 @@ Summary:	PostgreSQL module for Ruby
 Summary(pl):	Modu³ PostgreSQL dla Ruby
 Name:		ruby-Postgres
 %define tarname ruby-postgres
-Version:	0.7.1
-Release:	1
+Version:	0.7.2
+%define pre 20050412
+Release:	0.%{pre}.1
 License:	Ruby License
 Group:		Development/Languages
-Source0:	http://www.postgresql.jp/interfaces/ruby/archive/%{tarname}-%{version}.tar.gz
-# Source0-md5:	8ef67b3f4b089248f0420baeb0e3b3c8
-Patch0:		ruby-postgres-link.patch
-URL:		http://www.postgresql.jp/interfaces/ruby/
+Source0:	http://ruby.scripting.ca/postgres/archive/ruby-postgres-%{pre}.tar.gz
+# Source0-md5:	34693e6468f8c20f1f0c039f7e101cdf
+URL:		http://ruby.scripting.ca/postgre
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 BuildRequires:	postgresql-devel
@@ -25,8 +25,7 @@ PostgreSQL module for Ruby.
 Modu³ PostgreSQL dla Ruby.
 
 %prep
-%setup -q -n %{tarname}-%{version}
-%patch0 -p1
+%setup -q -n %{tarname}
 
 %build
 ruby extconf.rb
