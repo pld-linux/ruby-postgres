@@ -12,7 +12,6 @@ Source0:	http://ruby.scripting.ca/postgres/archive/ruby-postgres-%{pre}.tar.gz
 URL:		http://ruby.scripting.ca/postgres/
 BuildRequires:	postgresql-devel
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 Obsoletes:	ruby-postgres
