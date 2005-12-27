@@ -4,7 +4,7 @@ Summary(pl):	Modu³ PostgreSQL dla Ruby
 Name:		ruby-Postgres
 Version:	0.7.2
 %define pre 20050412
-Release:	0.%{pre}.1
+Release:	0.%{pre}.2
 License:	Ruby License
 Group:		Development/Languages
 Source0:	http://ruby.scripting.ca/postgres/archive/ruby-postgres-%{pre}.tar.gz
@@ -12,9 +12,9 @@ Source0:	http://ruby.scripting.ca/postgres/archive/ruby-postgres-%{pre}.tar.gz
 URL:		http://ruby.scripting.ca/postgres/
 BuildRequires:	postgresql-devel
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
-Requires:	ruby
+Requires:	ruby-modules
 Obsoletes:	ruby-postgres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
