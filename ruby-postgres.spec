@@ -11,9 +11,9 @@ Source0:	http://ruby.scripting.ca/postgres/archive/ruby-postgres-%{pre}.tar.gz
 # Source0-md5:	34693e6468f8c20f1f0c039f7e101cdf
 URL:		http://ruby.scripting.ca/postgres/
 BuildRequires:	postgresql-devel
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 Obsoletes:	ruby-postgres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
