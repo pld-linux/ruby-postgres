@@ -13,7 +13,7 @@ URL:		http://ruby.scripting.ca/postgres/
 BuildRequires:	postgresql-devel
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 Obsoletes:	ruby-postgres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
