@@ -1,6 +1,6 @@
 %define tarname ruby-postgres
 Summary:	PostgreSQL module for Ruby
-Summary(pl.UTF-8):   Moduł PostgreSQL dla Ruby
+Summary(pl.UTF-8):	Moduł PostgreSQL dla Ruby
 Name:		ruby-Postgres
 Version:	0.7.2
 %define pre 20050412
