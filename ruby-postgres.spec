@@ -1,7 +1,6 @@
-%define tarname ruby-postgres
 Summary:	PostgreSQL module for Ruby
 Summary(pl.UTF-8):	Moduł PostgreSQL dla Ruby
-Name:		ruby-Postgres
+Name:		ruby-postgres
 Version:	0.7.9.2008.01.28
 Release:	1
 License:	Ruby License
@@ -13,7 +12,7 @@ BuildRequires:	postgresql-devel
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel >= 1:1.8.4-5
 %{?ruby_mod_ver_requires_eq}
-Obsoletes:	ruby-postgres
+Obsoletes:	ruby-Postgres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,7 +22,7 @@ PostgreSQL module for Ruby.
 Moduł PostgreSQL dla Ruby.
 
 %prep
-%setup -q -n %{tarname}
+%setup -q -n %{name}
 
 %build
 cd ext
